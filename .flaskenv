@@ -1,0 +1,2 @@
+FLASK_APP=oneblog
+FLASK_ENV=development

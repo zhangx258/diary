@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block content %}
+    <a href="{{ url_for('.post_article') }}" class="btn btn-outline-info float-left m-3">添加</a>
+    <a href="{{ url_for('.post_article') }}" class="btn btn-outline-info float-right m-3">登录</a>
+    <a href="{{ url_for('.post_article') }}" class="btn btn-outline-info float-right m-3">注册</a>
+    {% if articles %}
+    <div class="list-group w-100">
+        {% for article in articles %}
+            <div class="list-group-item list-group-flush list-group-item-action">
+            <div class="d-flex justify-content-between">
+                <a href="{{ url_for('.show_article', article_id=article.id) }}">{{ article.title }}</a>
+                <span>{{ article.timestamp }}</span>
+            </div>
+            <h5>{{ article.body|striptags|truncate }}</h5>
+            <div>{{ render_form(delete, action=url_for('.delete_article',article_id=article.id)) }}</div>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endblock %}

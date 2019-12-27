@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block content %}
+    <a href="{{ url_for('.index') }}" class="btn btn-info m-3">返回主页</a>
+    <div>
+        {{ render_form(forms,action=request.full_path) }}
+    </div>
+{% endblock %}
