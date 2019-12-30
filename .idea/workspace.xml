@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9feb9bbe-7cee-4fa1-81ea-489558de1b69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/oneblog/templates/blog/_sidebar.html" afterDir="false" />
+    <list default="true" id="9feb9bbe-7cee-4fa1-81ea-489558de1b69" name="Default Changelist" comment="add category and sidebar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oneblog/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oneblog/blueprints/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/blueprints/blog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oneblog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oneblog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oneblog/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oneblog/templates/blog/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/templates/blog/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oneblog/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/templates/blog/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="340">
               <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
             </state>
           </provider>
@@ -66,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oneblog/blueprints/blog.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -93,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/oneblog/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="15" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="15" />
+            <state relative-caret-position="212">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding>
                 <element signature="e#115#187#0" expanded="true" />
               </folding>
@@ -108,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oneblog/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            <state relative-caret-position="136">
+              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -171,10 +164,10 @@
         <option value="$PROJECT_DIR$/oneblog/templates/blog/article.html" />
         <option value="$PROJECT_DIR$/oneblog/templates/blog/_sidebar.html" />
         <option value="$PROJECT_DIR$/oneblog/__init__.py" />
-        <option value="$PROJECT_DIR$/oneblog/templates/base.html" />
-        <option value="$PROJECT_DIR$/oneblog/forms.py" />
         <option value="$PROJECT_DIR$/oneblog/templates/blog/index.html" />
         <option value="$PROJECT_DIR$/oneblog/blueprints/blog.py" />
+        <option value="$PROJECT_DIR$/oneblog/templates/base.html" />
+        <option value="$PROJECT_DIR$/oneblog/forms.py" />
       </list>
     </option>
   </component>
@@ -338,7 +331,7 @@
       <workItem from="1577255153025" duration="13001000" />
       <workItem from="1577326072212" duration="11167000" />
       <workItem from="1577412009791" duration="21007000" />
-      <workItem from="1577670388147" duration="16179000" />
+      <workItem from="1577670388147" duration="16701000" />
     </task>
     <task id="LOCAL-00001" summary="add category">
       <created>1577689950306</created>
@@ -347,22 +340,29 @@
       <option name="project" value="LOCAL" />
       <updated>1577689950306</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add category and sidebar">
+      <created>1577696054880</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577696054880</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61354000" />
+    <option name="totallyTimeSpent" value="61876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34927696" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34927696" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -385,7 +385,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add category" />
-    <option name="LAST_COMMIT_MESSAGE" value="add category" />
+    <MESSAGE value="add category and sidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="add category and sidebar" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Pipfile.lock">
@@ -534,13 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/category.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -548,44 +542,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-          <folding>
-            <element signature="e#119#142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/_sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="e#117#150#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -603,12 +563,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/forms.py">
+    <entry file="file://$PROJECT_DIR$/oneblog/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="15" />
+        <state relative-caret-position="136">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
           <folding>
-            <element signature="e#115#187#0" expanded="true" />
+            <element signature="e#119#142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="e#117#150#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -617,6 +608,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="58" column="94" selection-start-line="58" selection-start-column="94" selection-end-line="58" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="e#115#187#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
