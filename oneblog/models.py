@@ -10,6 +10,7 @@ from datetime import datetime
 
 class User(db.Model):
     __tablename__ = 'user'
+    __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(64), unique=True, index=True)
@@ -17,6 +18,7 @@ class User(db.Model):
 
 class Article(db.Model):
     __tablename__ = 'article'
+    __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(60))

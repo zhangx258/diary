@@ -14,8 +14,9 @@ blog_bp = Blueprint('blog', __name__)
 @blog_bp.route('/')
 def index():
     delete = DeletearticleForm()
+    edit = EditarticleForm()
     articles = Article.query.order_by(Article.timestamp.desc())
-    return render_template('blog/index.html', articles=articles, delete=delete)
+    return render_template('blog/index.html', articles=articles, delete=delete, edit=edit)
 
 
 @blog_bp.route('/article/<int:article_id>')
@@ -49,6 +50,18 @@ def delete_article(article_id):
     else:
         abort(400)
     return redirect(url_for('.index'))
+
+
+@blog_bp.route('/edit/<int:article_id>', methods=['GET', 'POST'])
+def edit_article(article_id):
+    default = Article.query.get_or_404(article_id)
+    form = ArticleForm(title=default.title, body=default.body)
+    if form.validate_on_submit():
+        default.title = form.title.data
+        default.body = form.body.data
+        db.session.commit()
+        return redirect(url_for('.index'))
+    return render_template('blog/post.html', forms=form)
 
 
 @blog_bp.route('/404')

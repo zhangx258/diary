@@ -20,3 +20,7 @@ class ArticleForm(FlaskForm):
 
 class DeletearticleForm(FlaskForm):
     submit = SubmitField('Delete')
+
+
+class EditarticleForm(FlaskForm):
+    submit = SubmitField('Edit', render_kw={'class':'btn btn-outline-info float-left m-3'})
