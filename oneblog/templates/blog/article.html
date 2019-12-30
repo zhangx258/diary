@@ -4,7 +4,7 @@
     {% if article %}
         <div class="list-group-item list-group-flush list-group-item-action">
             <div class="list-group-header d-flex justify-content-between">{{ article.title }}
-                <p>{{ article.category }}</p>
+                <p>{{ article.category.name }}</p>
                 <p>{{ article.timestamp }}</p>
             </div>
             <h5>{{ article.body|striptags }}</h5>

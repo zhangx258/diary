@@ -10,6 +10,7 @@ from oneblog.extensions import db, moment, bootstrap
 import click
 from oneblog.models import *
 from faker import Faker
+import random
 
 
 def create_app(config_name='config.py'):
@@ -23,7 +24,7 @@ def create_app(config_name='config.py'):
     bootstrap.init_app(app)
 
     register_commands(app)
-
+    register_template_context(app)
     return app
 
 
@@ -37,6 +38,11 @@ def register_commands(app):
             db.drop_all()
             click.echo('Drop tables.')
         db.create_all()
+        category_list = ['默认', '随笔', '工作', '私人']
+        for name in category_list:
+            category = Category(name=name)
+            db.session.add(category)
+        db.session.commit()
         click.echo('Initialized database.')
 
     @app.cli.command()
@@ -46,8 +52,18 @@ def register_commands(app):
             post = Article(
                 title=fake.sentence(),
                 body=fake.text(2000),
+                category=Category.query.get(random.randint(1, Category.query.count())),
                 timestamp=fake.date_time_this_year()
             )
             db.session.add(post)
         db.session.commit()
         click.echo('Add some fake articles.')
+
+
+def register_template_context(app):
+    @app.context_processor
+    def make_template_context():
+        categories = Category.query.order_by(Category.name).all()
+
+        return dict(
+            categories=categories,)

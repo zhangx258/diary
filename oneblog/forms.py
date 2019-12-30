@@ -6,20 +6,24 @@
 from wtforms import StringField, SubmitField, TextAreaField, SelectField
 from flask_wtf import FlaskForm
 from wtforms.validators import DataRequired, Length
+from oneblog.models import Category
 
 
 class ArticleForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired(), Length(1, 60)])
     body = TextAreaField('Body', validators=[DataRequired()])
-    category = SelectField('Category', validators=[DataRequired()],
-                           choices=[('随笔', '随笔'), ('工作', '工作'), ('其他', '其他')],
-                           coerce=str,)
+    category_id = SelectField('Category', validators=[DataRequired()], coerce=int, default=1)
     submit = SubmitField('Submit')
+
+    def __init__(self, *args, **kwargs):
+        super(ArticleForm, self).__init__(*args, **kwargs)
+        self.category_id.choices = [(category.id, category.name)
+                                 for category in Category.query.order_by(Category.id).all()]
 
 
 class DeletearticleForm(FlaskForm):
-    submit = SubmitField('Delete')
+    submit = SubmitField('删除')
 
 
 class EditarticleForm(FlaskForm):
-    submit = SubmitField('Edit', render_kw={'class':'btn btn-outline-info float-left m-3'})
+    submit = SubmitField('编辑')

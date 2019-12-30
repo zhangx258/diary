@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9feb9bbe-7cee-4fa1-81ea-489558de1b69" name="Default Changelist" comment="add category">
+    <list default="true" id="9feb9bbe-7cee-4fa1-81ea-489558de1b69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/oneblog/templates/blog/_sidebar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneblog/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oneblog/blueprints/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/blueprints/blog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oneblog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oneblog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneblog/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oneblog/templates/blog/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/templates/blog/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneblog/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/oneblog/templates/blog/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/oneblog$oneblog.coverage" NAME="oneblog Coverage Results" MODIFIED="1577689350798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/oneblog$oneblog.coverage" NAME="oneblog Coverage Results" MODIFIED="1577694723187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/oneblog$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1577670466689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/oneblog" />
   </component>
   <component name="FileEditorManager">
@@ -23,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oneblog/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+            <state relative-caret-position="283">
+              <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
               <folding>
                 <element signature="e#119#142#0" expanded="true" />
               </folding>
@@ -35,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -53,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oneblog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="408">
+              <caret line="36" column="13" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="13" />
               <folding>
                 <element signature="e#117#150#0" expanded="true" />
               </folding>
@@ -62,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/oneblog/blueprints/blog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+            <state relative-caret-position="187">
+              <caret line="58" column="94" selection-start-line="58" selection-start-column="94" selection-end-line="58" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -83,17 +87,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="204">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oneblog/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+            <state relative-caret-position="170">
+              <caret line="14" column="15" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="15" />
               <folding>
                 <element signature="e#115#187#0" expanded="true" />
               </folding>
@@ -102,10 +106,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oneblog/extensions.py">
+        <entry file="file://$PROJECT_DIR$/oneblog/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="680">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/_sidebar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -128,10 +141,15 @@
       <find>header</find>
       <find>render</find>
       <find>meta</find>
+      <find>orm</find>
+      <find>cate</find>
+      <find>category</find>
+      <find>edit</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -146,14 +164,16 @@
         <option value="$PROJECT_DIR$/oneblog/templates/blog/post.html" />
         <option value="$PROJECT_DIR$/oneblog/static/css/style.css" />
         <option value="$PROJECT_DIR$/oneblog/templates/errors/404.html" />
-        <option value="$PROJECT_DIR$/oneblog/__init__.py" />
         <option value="$PROJECT_DIR$/oneblog/extensions.py" />
-        <option value="$PROJECT_DIR$/oneblog/templates/base.html" />
-        <option value="$PROJECT_DIR$/oneblog/templates/blog/index.html" />
         <option value="$PROJECT_DIR$/oneblog/config.py" />
         <option value="$PROJECT_DIR$/oneblog/models.py" />
+        <option value="$PROJECT_DIR$/oneblog/templates/blog/category.html" />
         <option value="$PROJECT_DIR$/oneblog/templates/blog/article.html" />
+        <option value="$PROJECT_DIR$/oneblog/templates/blog/_sidebar.html" />
+        <option value="$PROJECT_DIR$/oneblog/__init__.py" />
+        <option value="$PROJECT_DIR$/oneblog/templates/base.html" />
         <option value="$PROJECT_DIR$/oneblog/forms.py" />
+        <option value="$PROJECT_DIR$/oneblog/templates/blog/index.html" />
         <option value="$PROJECT_DIR$/oneblog/blueprints/blog.py" />
       </list>
     </option>
@@ -164,7 +184,9 @@
     <option name="width" value="1529" />
     <option name="height" value="915" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -316,22 +338,31 @@
       <workItem from="1577255153025" duration="13001000" />
       <workItem from="1577326072212" duration="11167000" />
       <workItem from="1577412009791" duration="21007000" />
-      <workItem from="1577670388147" duration="10338000" />
+      <workItem from="1577670388147" duration="16179000" />
     </task>
+    <task id="LOCAL-00001" summary="add category">
+      <created>1577689950306</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577689950306</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55513000" />
+    <option name="totallyTimeSpent" value="61354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17910448" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27363738" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34927696" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -340,7 +371,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.5105673" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4115684" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -427,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oneblog/static/css/bootstrap.css.map">
       <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor">
@@ -467,34 +491,10 @@
       <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-          <folding>
-            <element signature="e#119#142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/oneblog-2xgTTM7T/Lib/site-packages/wtforms/meta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
           <caret line="54" column="21" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
         </state>
       </provider>
     </entry>
@@ -508,10 +508,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/oneblog-2xgTTM7T/Lib/site-packages/sqlalchemy/orm/strategy_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56279" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/oneblog-2xgTTM7T/Lib/site-packages/sqlalchemy/orm/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-791">
+          <caret line="256" column="45" selection-start-line="256" selection-start-column="45" selection-end-line="256" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/oneblog-2xgTTM7T/Lib/site-packages/flask_sqlalchemy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3470">
+          <caret line="749" column="17" selection-start-line="749" selection-start-column="17" selection-end-line="749" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/oneblog/extensions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="229">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+          <folding>
+            <element signature="e#119#142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/_sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="e#117#150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -522,37 +603,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/models.py">
+    <entry file="file://$PROJECT_DIR$/oneblog/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="170">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="15" />
           <folding>
-            <element signature="e#117#150#0" expanded="true" />
+            <element signature="e#115#187#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oneblog/blueprints/blog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/templates/blog/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oneblog/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="e#115#187#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="58" column="94" selection-start-line="58" selection-start-column="94" selection-end-line="58" selection-end-column="94" />
         </state>
       </provider>
     </entry>

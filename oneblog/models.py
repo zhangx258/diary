@@ -16,6 +16,15 @@ class User(db.Model):
     name = db.Column(db.String(64), unique=True, index=True)
 
 
+class Category(db.Model):
+    __talbename__ = 'category'
+    __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(30), unique=True)
+    articles = db.relationship('Article', back_populates='category')
+
+
 class Article(db.Model):
     __tablename__ = 'article'
     __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
@@ -23,5 +32,6 @@ class Article(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(60))
     body = db.Column(db.TEXT)
-    category = db.Column(db.String(20))
+    category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
+    category = db.relationship('Category', back_populates='articles')
     timestamp = db.Column(db.DateTime, default=datetime.now, index=True)

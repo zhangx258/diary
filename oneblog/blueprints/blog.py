@@ -31,9 +31,9 @@ def post_article():
     if form.validate_on_submit():
         title = form.title.data
         body = form.body.data
-        category = form.category.data
+        category_id = form.category_id.data
         article = Article(
-            title=title, body=body, category=category
+            title=title, body=body, category_id=category_id
         )
         db.session.add(article)
         db.session.commit()
@@ -56,14 +56,24 @@ def delete_article(article_id):
 @blog_bp.route('/edit/<int:article_id>', methods=['GET', 'POST'])
 def edit_article(article_id):
     default = Article.query.get_or_404(article_id)
-    form = ArticleForm(title=default.title, body=default.body)
+    form = ArticleForm(title=default.title, body=default.body, category_id=default.category_id)
     if form.validate_on_submit():
         default.title = form.title.data
         default.body = form.body.data
-        default.category = form.category.data
+        default.category_id = form.category_id.data
+        default.timestamp = datetime.now()
         db.session.commit()
         return redirect(url_for('.index'))
     return render_template('blog/post.html', forms=form)
+
+
+@blog_bp.route('/category/<int:category_id>')
+def show_category(category_id):
+    category = Category.query.get_or_404(category_id)
+    delete = DeletearticleForm()
+    edit = EditarticleForm()
+    articles = Article.query.with_parent(category).order_by(Article.timestamp.desc())
+    return render_template('blog/index.html', articles=articles, delete=delete, edit=edit)
 
 
 @blog_bp.route('/404')
