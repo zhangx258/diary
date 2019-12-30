@@ -23,5 +23,5 @@ class Article(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(60))
     body = db.Column(db.TEXT)
-    # category = db.Column(db.String(20), default='Default')
+    category = db.Column(db.String(20))
     timestamp = db.Column(db.DateTime, default=datetime.now, index=True)

@@ -31,8 +31,9 @@ def post_article():
     if form.validate_on_submit():
         title = form.title.data
         body = form.body.data
+        category = form.category.data
         article = Article(
-            title=title, body=body
+            title=title, body=body, category=category
         )
         db.session.add(article)
         db.session.commit()
@@ -59,6 +60,7 @@ def edit_article(article_id):
     if form.validate_on_submit():
         default.title = form.title.data
         default.body = form.body.data
+        default.category = form.category.data
         db.session.commit()
         return redirect(url_for('.index'))
     return render_template('blog/post.html', forms=form)

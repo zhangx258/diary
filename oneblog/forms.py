@@ -11,10 +11,9 @@ from wtforms.validators import DataRequired, Length
 class ArticleForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired(), Length(1, 60)])
     body = TextAreaField('Body', validators=[DataRequired()])
-    # category = SelectField('Category', validators=[DataRequired()],
-    #                        choices=[(1, '日记'), (2, '星座'), (3, '爱情')],
-    #                        default=1,
-    #                        coerce=int)
+    category = SelectField('Category', validators=[DataRequired()],
+                           choices=[('随笔', '随笔'), ('工作', '工作'), ('其他', '其他')],
+                           coerce=str,)
     submit = SubmitField('Submit')
 
 
