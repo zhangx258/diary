@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-    <a href="{{ url_for('.index') }}" class="btn btn-info m-3">返回主页</a>
     {% if article %}
         <div class="list-group-item list-group-flush list-group-item-action">
             <div class="list-group-header d-flex justify-content-between">{{ article.title }}

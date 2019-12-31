@@ -8,6 +8,7 @@
 from flask import Blueprint, render_template, redirect, url_for, abort, request, current_app
 from oneblog.models import *
 from oneblog.forms import *
+from flask_login import login_required
 blog_bp = Blueprint('blog', __name__)
 
 
@@ -23,12 +24,14 @@ def index():
 
 
 @blog_bp.route('/article/<int:article_id>')
+@login_required
 def show_article(article_id):
     article = Article.query.filter(Article.id == article_id).first()
     return render_template('blog/article.html', article=article)
 
 
 @blog_bp.route('/post/', methods=['GET', 'POST'])
+@login_required
 def post_article():
     form = ArticleForm()
     if form.validate_on_submit():
@@ -45,6 +48,7 @@ def post_article():
 
 
 @blog_bp.route('/delete/<int:article_id>', methods=['POST'])
+@login_required
 def delete_article(article_id):
     form = DeletearticleForm()
     if form.validate_on_submit():
@@ -57,6 +61,7 @@ def delete_article(article_id):
 
 
 @blog_bp.route('/edit/<int:article_id>', methods=['GET', 'POST'])
+@login_required
 def edit_article(article_id):
     default = Article.query.get_or_404(article_id)
     form = ArticleForm(title=default.title, body=default.body, category_id=default.category_id)
@@ -75,8 +80,12 @@ def show_category(category_id):
     category = Category.query.get_or_404(category_id)
     delete = DeletearticleForm()
     edit = EditarticleForm()
-    articles = Article.query.with_parent(category).order_by(Article.timestamp.desc())
-    return render_template('blog/index.html', articles=articles, delete=delete, edit=edit)
+    page = request.args.get('page', 1, type=int)
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+    pagination = Article.query.with_parent(category).order_by(Article.timestamp.desc()).paginate(page,
+                                                                                                 per_page=per_page)
+    articles = pagination.items
+    return render_template('blog/index.html', articles=articles, delete=delete, edit=edit, pagination=pagination)
 
 
 @blog_bp.route('/404')

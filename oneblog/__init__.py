@@ -6,9 +6,10 @@
 
 from flask import Flask
 from oneblog.blueprints.blog import blog_bp
-from oneblog.extensions import db, moment, bootstrap
+from oneblog.blueprints.admin import admin_bg
+from oneblog.extensions import db, moment, bootstrap, login_manager
 import click
-from oneblog.models import *
+from oneblog.models import Admin, Category, Article
 from faker import Faker
 import random
 
@@ -18,10 +19,12 @@ def create_app(config_name='config.py'):
     app.config.from_pyfile(config_name)
 
     app.register_blueprint(blog_bp)
+    app.register_blueprint(admin_bg, url_prefix='/admin')
 
     db.init_app(app)
     moment.init_app(app)
     bootstrap.init_app(app)
+    login_manager.init_app(app)
 
     register_commands(app)
     register_template_context(app)
@@ -38,12 +41,32 @@ def register_commands(app):
             db.drop_all()
             click.echo('Drop tables.')
         db.create_all()
-        category_list = ['默认', '随笔', '工作', '私人']
-        for name in category_list:
-            category = Category(name=name)
-            db.session.add(category)
-        db.session.commit()
         click.echo('Initialized database.')
+
+    @app.cli.command()
+    @click.option('-username', prompt=True, help='The username used to login.')
+    @click.option('-password', prompt=True, hide_input=True,
+                  confirmation_prompt=True, help='The password used to login.')
+    def start(username, password):
+        admin = Admin.query.first()
+        if admin:
+            click.echo('The administrator already exists, updating...')
+            admin.username = username
+            admin.set_password(password)
+        else:
+            click.echo('Create the administrator account...')
+            admin = Admin(username=username)
+            admin.set_password(password)
+            db.session.add(admin)
+        category = Category.query.first()
+        if category is None:
+            click.echo('Create the category...')
+            category_list = ['默认', '随笔', '工作', '私人']
+            for name in category_list:
+                category = Category(name=name)
+                db.session.add(category)
+        db.session.commit()
+        click.echo('Done.')
 
     @app.cli.command()
     def forge():

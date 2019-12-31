@@ -2,6 +2,6 @@
 {% from 'bootstrap/form.html' import render_form %}
 {% block content %}
     <div>
-        {{ render_form(forms,action=request.full_path) }}
+        {{ render_form(form,action=request.full_path) }}
     </div>
 {% endblock %}

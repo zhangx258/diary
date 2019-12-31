@@ -3,7 +3,7 @@
 # @Author  : bill
 # @File    : forms.py
 # @Software: PyCharm
-from wtforms import StringField, SubmitField, TextAreaField, SelectField
+from wtforms import StringField, SubmitField, TextAreaField, SelectField, PasswordField
 from flask_wtf import FlaskForm
 from wtforms.validators import DataRequired, Length
 from oneblog.models import Category
@@ -27,3 +27,9 @@ class DeletearticleForm(FlaskForm):
 
 class EditarticleForm(FlaskForm):
     submit = SubmitField('编辑')
+
+
+class AdminForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired(), Length(1, 20)])
+    password = PasswordField('Password', validators=[DataRequired(), Length(1, 128)])
+    submit = SubmitField('登录')

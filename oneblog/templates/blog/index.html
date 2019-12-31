@@ -4,8 +4,13 @@
 {% from 'bootstrap/pagination.html' import render_pager %}
 {% block content %}
     <a href="{{ url_for('.post_article') }}" class="btn btn-outline-info float-left m-3">添加</a>
-    <a href="{{ url_for('.post_article') }}" class="btn btn-outline-info float-right m-3">登录</a>
-    <a href="{{ url_for('.post_article') }}" class="btn btn-outline-info float-right m-3">注册</a>
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('admin.logout', next=request.full_path) }}" class="btn btn-outline-info float-right m-3">登出</a>
+    {% else %}
+        <a href="{{ url_for('admin.login', next=request.full_path) }}" class="btn btn-outline-info float-right m-3">登录</a>
+    {% endif %}
+
+{#    <a href="{{ url_for('.post_article') }}" class="btn btn-outline-info float-right m-3">注册</a>#}
     {% if articles %}
     <div class="list-group w-100">
         {% for article in articles %}
