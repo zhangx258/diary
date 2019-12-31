@@ -5,7 +5,7 @@
 # @Software: PyCharm
 
 
-from flask import Blueprint, render_template, redirect, url_for, abort
+from flask import Blueprint, render_template, redirect, url_for, abort, request, current_app
 from oneblog.models import *
 from oneblog.forms import *
 blog_bp = Blueprint('blog', __name__)
@@ -15,8 +15,11 @@ blog_bp = Blueprint('blog', __name__)
 def index():
     delete = DeletearticleForm()
     edit = EditarticleForm()
-    articles = Article.query.order_by(Article.timestamp.desc())
-    return render_template('blog/index.html', articles=articles, delete=delete, edit=edit)
+    page = request.args.get('page', 1, type=int)
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+    pagination = Article.query.order_by(Article.timestamp.desc()).paginate(page, per_page=per_page)
+    articles = pagination.items
+    return render_template('blog/index.html', articles=articles, delete=delete, edit=edit, pagination=pagination)
 
 
 @blog_bp.route('/article/<int:article_id>')
