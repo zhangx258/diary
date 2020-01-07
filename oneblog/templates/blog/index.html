@@ -1,16 +1,12 @@
 {% extends 'base.html' %}
 {% from 'bootstrap/form.html' import render_form %}
-{% from 'bootstrap/form.html' import render_field%}
 {% from 'bootstrap/pagination.html' import render_pager %}
-{% block content %}
-    <a href="{{ url_for('.post_article') }}" class="btn btn-outline-info float-left m-3">添加</a>
+{% block signature %}
     {% if current_user.is_authenticated %}
-        <a href="{{ url_for('admin.logout', next=request.full_path) }}" class="btn btn-outline-info float-right m-3">登出</a>
-    {% else %}
-        <a href="{{ url_for('admin.login', next=request.full_path) }}" class="btn btn-outline-info float-right m-3">登录</a>
+        zhangx258
     {% endif %}
-
-{#    <a href="{{ url_for('.post_article') }}" class="btn btn-outline-info float-right m-3">注册</a>#}
+{% endblock %}
+{% block content %}
     {% if articles %}
     <div class="list-group w-100">
         {% for article in articles %}
@@ -20,17 +16,6 @@
                 <span>{{ article.timestamp }}</span>
             </div>
             <h5>{{ article.body|striptags|truncate }}</h5>
-            <div>
-                <form method="get" action="{{ url_for('.edit_article',article_id=article.id) }}">
-                    {{ edit.csrf_token }}
-                    {{ render_field(edit.submit, class='btn btn-outline-info float-left mr-3') }}
-                </form>
-                <form method="post" action="{{ url_for('.delete_article',article_id=article.id) }}">
-                    {{ delete.csrf_token }}
-                    {{ render_field(delete.submit, class='btn btn-outline-info') }}
-                </form>
-
-            </div>
             </div>
         {% endfor %}
     </div>

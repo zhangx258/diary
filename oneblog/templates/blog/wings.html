@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{{ url_for('static', filename='wings.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.slim.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <title>Wings</title>
+</head>
+<body>
+<div class="page-header mb-5">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+                <div class="container">
+                    <a href="{{ url_for('blog.index') }}" class="navbar-brand">
+                        <img src="{{ url_for('static', filename='wings.png') }}" width="50">&nbsp;Diary
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="nav-menu">
+                        <ul class="navbar-nav mr-3">
+                            <li class="nav-item"><a href="{{ url_for('blog.about_wings') }}" class="nav-link text-danger">About</a></li>
+                            {% if current_user.is_authenticated %}
+                                <li class="nav-item">
+                                    <a href="{{ url_for('blog.post_article', next=request.full_path) }}" class="nav-link text-white">添加</a></li>
+                                <li class="nav-item">
+                                    <a href="{{ url_for('admin.logout', next=request.full_path) }}" class="nav-link text-white">登出</a></li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a href="{{ url_for('admin.login', next=request.full_path) }}" class="nav-link text-white">登录</a></li>
+                            {% endif %}
+                        </ul>
+                            <form class="form-inline" method="post" action="{{ url_for('blog.search') }}">
+                                <input class="form-control" name="kw" type="text" placeholder="Search">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </form>
+                    </div>
+                </div>
+            </nav>
+</div>
+<div class="page-header">
+    <div class="text-center">
+        <p class="display-5 text-muted">永远不会忘记2016的那个夏天，童话的名字叫Wings。</p>
+    </div>
+</div>
+<div class="container" style="height: 600px">
+<div id="demo" class="carousel slide w-100" data-ride="carousel">
+  <!-- 指示符 -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
+      <li data-target="#demo" data-slide-to="4"></li>
+      <li data-target="#demo" data-slide-to="5"></li>
+      <li data-target="#demo" data-slide-to="6"></li>
+  </ul>
+
+  <!-- 轮播图片 -->
+  <div class="carousel-inner text-center">
+    <div class="carousel-item active">
+      <img src="{{ url_for('static',filename='wings_pic/1.jpg') }}">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static',filename='wings_pic/2.jpg') }}">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static',filename='wings_pic/3.jpg') }}">
+    </div>
+      <div class="carousel-item">
+      <img src="{{ url_for('static',filename='wings_pic/4.jpg') }}">
+    </div>
+      <div class="carousel-item">
+      <img src="{{ url_for('static',filename='wings_pic/5.jpg') }}">
+    </div>
+      <div class="carousel-item">
+      <img src="{{ url_for('static',filename='wings_pic/6.jpg') }}">
+    </div>
+      <div class="carousel-item">
+      <img src="{{ url_for('static',filename='wings_pic/7.jpg') }}">
+    </div>
+  </div>
+
+  <!-- 左右切换按钮 -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon bg-danger"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon bg-danger"></span>
+  </a>
+
+</div>
+</div>
+</body>
+<footer>
+    <p class="text-center"><small> &copy; 2020 <a href="#" title="Written by Zhang258">Bill</a> -
+        <a href="https://liquipedia.net/dota2/Wings_Gaming" title="liquipedia">Liquipedia Wiki</a> -
+        <a href="https://baike.baidu.com/item/Wings%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80%E4%BF%B1%E4%B9%90%E9%83%A8/19912812" title="baidu">Baidu</a> -
+        <a href="https://www.zhihu.com/question/48394573" title="zhihu">Zhihu</a> -
+    </small>
+    </p>
+</footer>
+</html>
