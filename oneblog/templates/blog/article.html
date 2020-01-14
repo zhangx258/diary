@@ -5,7 +5,9 @@
         <div class="list-group-item list-group-flush list-group-item-action">
             <div class="list-group-header d-flex justify-content-between">{{ article.title }}
                 <p>{{ article.category.name }}</p>
-                <p>{{ article.timestamp }}</p>
+                <p data-toggle="tooltip" data-placement="top" data-delay="500"
+                   data-timestamp="{{ article.timestamp.strftime('%Y-%m-%dT%H:%M:%SZ') }}">
+                    {{ moment(article.timestamp).fromNow(refresh=True) }}</p>
             </div>
             <h5>{{ article.body|striptags }}</h5>
             <div>

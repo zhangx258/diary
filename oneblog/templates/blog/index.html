@@ -13,7 +13,9 @@
             <div class="list-group-item list-group-flush list-group-item-action">
             <div class="d-flex justify-content-between">
                 <a href="{{ url_for('.show_article', article_id=article.id) }}">{{ article.title }}</a>
-                <span>{{ article.timestamp }}</span>
+                <p data-toggle="tooltip" data-placement="top" data-delay="500"
+                   data-timestamp="{{ article.timestamp.strftime('%Y-%m-%dT%H:%M:%SZ') }}">
+                    {{ moment(article.timestamp).fromNow(refresh=True) }}</p>
             </div>
             <h5>{{ article.body|striptags|truncate }}</h5>
             </div>

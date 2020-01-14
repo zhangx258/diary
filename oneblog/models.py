@@ -36,7 +36,7 @@ class Article(db.Model):
     body = db.Column(db.TEXT)
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
     category = db.relationship('Category', back_populates='articles')
-    timestamp = db.Column(db.DateTime, default=datetime.now, index=True)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow, index=True)
 
 
 class Admin(db.Model, UserMixin):

@@ -17,7 +17,7 @@
             <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                 <div class="container">
                     <a href="{{ url_for('blog.index') }}" class="navbar-brand">
-                        <img src="{{ url_for('static', filename='wings.png') }}" width="50">&nbsp;Diary
+                        <img src="{{ url_for('static', filename='wings.png') }}" width="50">&nbsp;CN DOTA NEVER DIE!
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu">
                         <span class="navbar-toggler-icon"></span>
@@ -79,6 +79,8 @@
             <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
             <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
             <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+            {{ moment.include_moment(local_js=url_for('static', filename='js/moment-with-locales.min.js')) }}
+            {{ moment.locale(auto_detect=True) }}
         {% endblock %}
     </body>
 </html>
